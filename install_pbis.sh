@@ -34,5 +34,9 @@ yum install -y pbis-open pbis-open-upgrade
 /opt/pbis/bin/config LoginShellTemplate "/bin/bash"
 /opt/pbis/bin/config SpaceReplacement "_"
 
+#Set up sudoers
+
+echo "%domain_admins  ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
+
 fi
 exit 0
